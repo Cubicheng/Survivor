@@ -1,2 +1,2 @@
-# A SImple Survivor Game with Easyx
+# A Simple Survivor Game with Easyx
 
