@@ -7,3 +7,11 @@
 
 # define WINDOW_WIDTH 1280
 # define WINDOW_HEIGHT 720
+
+# define BUTTON_WIDTH 192
+# define BUTTON_HEIGHT 75
+
+namespace df {
+	extern bool running;
+	extern bool is_game_start;
+}

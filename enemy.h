@@ -3,13 +3,13 @@
 #include <conio.h>
 #include "player.h"
 #include "bullet.h"
+#include "anim.h"
 #include <vector>
 
 
 class Enemy {
 public:
-    Enemy(int &enemy_speed);
-    void LoadAnimation();
+    Enemy(int &enemy_speed,Anim * anim);
     void put_img(IMAGE* img, int x, int y);
     void put_enemy_img();
     void put_left_img();
@@ -34,7 +34,5 @@ private:
     int is_move_right;
     bool alive;
     DWORD start_time;
-    IMAGE img_enemy_left[6];
-    IMAGE img_enemy_right[6];
-    IMAGE img_enemy_shadow;
+    Anim* anim_ptr;
 };

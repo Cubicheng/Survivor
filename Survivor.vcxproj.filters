@@ -30,6 +30,15 @@
     <ClCompile Include="draw.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="anim.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="button.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="define.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="player.h">
@@ -45,6 +54,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="draw.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="anim.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="button.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StartGameButton.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="QuitGameButton.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -4,16 +4,16 @@
 #include <string>
 #include <stdlib.h>
 #include <cmath>
+#include <iostream>
 
-Enemy::Enemy(int &enemy_speed) {
+Enemy::Enemy(int &enemy_speed,Anim * anim) {
     idx_cur_anim = 0;
     speed = enemy_speed;
     is_move_left = false;
     is_move_right = false;
     alive = true;
     start_time = GetTickCount();
-    LoadAnimation();
-
+    anim_ptr = anim;
     int op = rand() % 4;
     switch (op) {
     case UP_EDGE:
@@ -35,17 +35,7 @@ Enemy::Enemy(int &enemy_speed) {
     }
 }
 
-inline void Enemy::LoadAnimation() {
-    for (int i = 0; i < ENEMY_ANIM_NUM; i++) {
-        std::wstring path = L"img/enemy_left_" + std::to_wstring(i) + L".png";
-        loadimage(&img_enemy_left[i], path.c_str());
-    }
-    for (int i = 0; i < ENEMY_ANIM_NUM; i++) {
-        std::wstring path = L"img/enemy_right_" + std::to_wstring(i) + L".png";
-        loadimage(&img_enemy_right[i], path.c_str());
-    }
-    loadimage(&img_enemy_shadow, L"img/shadow_enemy.png");
-}
+
 
 #pragma comment(lib,"MSIMG32.LIB")
 
@@ -72,15 +62,15 @@ void Enemy::put_enemy_img() {
 void Enemy::put_shadow_img() {
     int shadow_x = x + ENEMY_WIDTH / 2 - SHADOW_WIDTH / 2;
     int shadow_y = y + ENEMY_HEIGHT - 30;
-    put_img(&img_enemy_shadow, shadow_x, shadow_y);
+    put_img((anim_ptr->get_shadow()), shadow_x, shadow_y);
 }
 
 void Enemy::put_left_img() {
-    put_img(&img_enemy_left[idx_cur_anim], x, y);
+    put_img(anim_ptr->get_left(idx_cur_anim), x, y);
 }
 
 void Enemy::put_right_img() {
-    put_img(&img_enemy_right[idx_cur_anim], x, y);
+    put_img(anim_ptr->get_right(idx_cur_anim), x, y);
 }
 
 void Enemy::idx_increase() {
