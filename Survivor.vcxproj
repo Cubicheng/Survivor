@@ -135,8 +135,11 @@
     <ClCompile Include="define.cpp" />
     <ClCompile Include="draw.cpp" />
     <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="music.cpp" />
     <ClCompile Include="player.cpp" />
+    <ClCompile Include="timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="anim.h" />
@@ -145,9 +148,12 @@
     <ClInclude Include="define.h" />
     <ClInclude Include="draw.h" />
     <ClInclude Include="enemy.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="music.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="QuitGameButton.h" />
     <ClInclude Include="StartGameButton.h" />
+    <ClInclude Include="timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

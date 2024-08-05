@@ -15,7 +15,7 @@ public:
 
 	static void upd_position(std::vector<Bullet*>& bullet_vector, const Player& player) {
 		const double RADIAL_SPEED = 0.0045;
-		const double TANGENT_SPEED = 0.0055;
+		const double TANGENT_SPEED = 0.0030;
 		double radian_interval = 2 * 3.14159 / bullet_vector.size();
 		double radius = 100 + 25 * sin(GetTickCount() * RADIAL_SPEED);
 		for (int i = 0; i < bullet_vector.size(); i++) {

@@ -14,4 +14,7 @@
 namespace df {
 	extern bool running;
 	extern bool is_game_start;
+	extern int score;
+	extern int enemy_duration;
+	extern int enemy_speed;
 }
