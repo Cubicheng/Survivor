@@ -1,6 +1,6 @@
 # A Simple Survivor Game using Easyx
 
-Original author: voidmatrix
+Original author: Voidmatrix
 
 ![image-20241109145822355](README.assets/image-20241109145822355.png)
 
