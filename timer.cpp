@@ -9,7 +9,7 @@ namespace timer {
 	void frame_sleep() {
 		frame_end_time = GetTickCount();
 		frame_time = frame_end_time - frame_start_time;
-		if (frame_time < 1000 / 120) {
+		if (frame_time < 1000 / 60) {
 			Sleep(1000 / 60 - frame_time);
 		}
 	}
